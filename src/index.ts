@@ -37,7 +37,7 @@ const PORT = 8080; // default port to listen
         contentSecurityPolicy: {
           useDefaults: true,
           directives: {
-            scriptSrc: ["'self'", "'unsafe-inline'"], // To allow same host ReactUI get static contents
+            scriptSrc: ["'self'", "'unsafe-inline'"],
           },
         },
       }),
