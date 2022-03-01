@@ -62,7 +62,7 @@ export default class UsersController {
       delete _.body.password;
 
       const result = await userObject?.updateOne(_.body as User);
-      res.json(result);
+      res.status(200).json({ status: 'success' });
     } catch (err) {
       Logger.error(`Error: ${_.route} ${JSON.stringify(err)}`);
       return res.status(500).json(`Error: There was an error updating the user.`);
