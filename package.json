@@ -1,0 +1,47 @@
+{
+  "name": "forgerock-identity-excercise",
+  "version": "1.0.0",
+  "description": "Forgerock Identity interview excercise",
+  "main": "build/index.js",
+  "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "start": "npm run build && node .",
+    "start-prod": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "npx prettier --check .",
+    "prettier-fix": "npx prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "test"
+  },
+  "author": "Muhammad Umer",
+  "license": "MIT",
+  "dependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/passport": "^1.0.7",
+    "@types/passport-jwt": "^3.0.6",
+    "@types/passport-local": "^1.0.34",
+    "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.6",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "typescript": "^4.3.5",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/compression": "^1.7.1",
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.4.13",
+    "tslint": "^6.1.3"
+  }
+}
