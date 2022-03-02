@@ -10,12 +10,16 @@ export const addUserValidator = checkSchema({
     in: ['body'],
     notEmpty: true,
     exists: true,
+    trim: true,
+    escape: true,
     errorMessage: 'First name must be specified & valid',
   },
   lastName: {
     in: ['body'],
     notEmpty: true,
     exists: true,
+    trim: true,
+    escape: true,
     errorMessage: 'Last name must be specified & valid',
   },
   email: {
@@ -23,6 +27,9 @@ export const addUserValidator = checkSchema({
     notEmpty: true,
     isEmail: true,
     exists: true,
+    normalizeEmail: true,
+    trim: true,
+    escape: true,
     errorMessage: 'Email must be specified & valid',
   },
   password: {
@@ -35,6 +42,8 @@ export const addUserValidator = checkSchema({
     in: ['body'],
     notEmpty: true,
     exists: true,
+    trim: true,
+    escape: true,
     isIn: {
       options: [[Roles.ADMIN, Roles.USER]],
       errorMessage: 'Role must be specified & valid',
@@ -44,6 +53,8 @@ export const addUserValidator = checkSchema({
     in: ['body'],
     notEmpty: true,
     exists: true,
+    trim: true,
+    escape: true,
     custom: {
       options: (value) => isValidObjectId(value),
     },

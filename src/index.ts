@@ -36,9 +36,6 @@ const PORT = 8080; // default port to listen
       Helmet({
         contentSecurityPolicy: {
           useDefaults: true,
-          directives: {
-            scriptSrc: ["'self'", "'unsafe-inline'"],
-          },
         },
       }),
     );
